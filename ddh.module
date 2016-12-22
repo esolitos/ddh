@@ -1,0 +1,26 @@
+<?php
+
+function _ddh_getconf($setting_name) {
+  return \Drupal::config('ddh.settings')->get($setting_name);
+}
+
+function _ddh_print($data, $name='') {
+  if ( function_exists('dsm') ) {
+    dsm($data, $name);
+  }
+  elseif ( function_exists('kint') ) {
+    kint($data, $name);
+  }
+  else {
+    drupal_set_message('<pre>' . var_export($data, TRUE) . '</pre>', 'status');
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ddh_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ( _ddh_getconf('print_form_id') ) {
+    _ddh_print($form_id, 'ddh_form_alter');
+  }
+}
