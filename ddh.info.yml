@@ -2,6 +2,4 @@ name: Drupal Debug Helper
 type: module
 description: Adds a bunch of hooks and useful functions to extend Devel
 core: 8.x
-package: Devel
-dependencies:
-  - devel
+package: Developement
