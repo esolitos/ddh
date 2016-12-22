@@ -1,0 +1,31 @@
+{
+  "name": "drupal/ddh",
+  "description": "Adds a bunch of hooks and useful functions to extend Devel",
+  "keywords": ["devel", "debug", "Drupal"],
+  "type": "drupal-module",
+  "license": "MIT",
+  "homepage": "https://drupal.org/project/ddh",
+  "authors": [
+    {
+      "name": "Esolitos Marlon",
+      "homepage": "https://esolitos.com/",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://drupal.org/project/issues/ddh",
+    "source": "https://github.com/esolitos/ddh"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:esolitos/ddh.git"
+    }
+  ],
+  "require": {},
+  "extra": {
+    "branch-alias": {
+      "dev-8.x-1.x": "8.1.x-dev"
+    }
+  }
+}
